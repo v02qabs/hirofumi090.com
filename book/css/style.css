@@ -1,0 +1,32 @@
+body{
+	background-color: black;
+	font-family: 'serif';
+
+}
+
+
+h1{
+	color: silver;
+	padding-left: 25px;
+	background-color: black;
+}
+
+
+h2{
+	padding-left: 10px;
+	padding-top: 20px;
+	color:darkcyan;
+}
+
+h3#menu{
+	color: springgreen;
+	font-family: 'serif';
+
+}
+
+h3#section{
+	color: greenyellow;
+	font-family: 'serif';
+
+}
+
