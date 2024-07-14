@@ -1,0 +1,11 @@
+.box {
+  width:300px;
+  padding:1rem;
+  background:#ccc;
+}
+.slide {
+  position:absolute;
+  height:0;
+  overflow:hidden;
+  transition:all 1s;
+}
