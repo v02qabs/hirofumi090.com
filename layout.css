@@ -145,7 +145,7 @@ body {
 
 .g-nav-03 ul li {
     width: 18%;
-    padding: 5px 1%;
+    padding: 2px 1%;
     list-style: none;
     float: left;
     position: relative;
@@ -153,7 +153,7 @@ body {
 
 .g-nav-03 ul li a {
     display: block;
-    padding: 20px 0 23px;
+    padding: 5px 0 5px;
     text-align: center;
     color: #fff;
 }
@@ -165,7 +165,7 @@ body {
 
 .g-nav-03 ul li a:hover,
 .g-nav-03 ul li a:active {
-    padding: 20px 0;
+    padding: 5px 0;
     background: #fff;
     text-decoration: none;
     color: #000;
@@ -205,7 +205,7 @@ body {
 }
 
 .g-nav-03 ul li .second-level li a {
-    padding: 1em 0 0.8em 20px;
+    padding: 0.2em 0 0.8em 20px;
     background: url("../images/icon-arrow-white.png") no-repeat left center;
     text-align: left;
     color: #FFF;

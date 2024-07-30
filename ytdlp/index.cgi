@@ -1,5 +1,5 @@
-#!/usr/bin/python3
+#!/usr/local/bin/python
+import cgi
+print("Content-Type: text/html")
 
-print("Content-type: text/html charset=utf-8");
-
-print("Hello");
+print("Hello")
