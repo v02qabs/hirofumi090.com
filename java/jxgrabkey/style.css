@@ -1,0 +1,12 @@
+.menunav, li, ul, a{
+	background-color: #000000;
+	color: #ffffff;
+	display: flex;
+	padding: 10px 10px 10px;
+	}
+
+body{
+	margin:0;
+}
+
+
