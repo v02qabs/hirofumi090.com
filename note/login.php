@@ -1,4 +1,7 @@
 <?php
+class login{
+	public function(){
+
 	echo("ようこそ、hironoteへ。\n");
 	echo("ok");
 	echo("<br/>");
@@ -11,6 +14,8 @@
 	
 	}
 
+	}
+}
 
 	echo("login.php");
 ?>
