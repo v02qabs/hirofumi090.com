@@ -8,7 +8,6 @@
 	$stmt = $db -> query("SELECT pass FROM login where pass='1210'");
 	foreach($stmt as $row){
 		echo("Hello.$stmt様");
-		echo("
 
 
 	}
