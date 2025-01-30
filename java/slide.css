@@ -1,11 +1,8 @@
-.box {
-  width:300px;
-  padding:1rem;
-  background:#ccc;
+body{
+	margin: 0px;
 }
-.slide {
-  position:absolute;
-  height:0;
-  overflow:hidden;
-  transition:all 1s;
+nav_exit{
+	display: none;
 }
+
+

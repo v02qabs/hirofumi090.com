@@ -10,14 +10,15 @@
 </head>
 
 <body>
-	<nav_exit>
+	<nux>
 		<img src="./exit.png" width="50px" height="50px"></img>
-	</nav_exit>
+	</nux>
 
 
-	<nav_enter>
+	<nav>
 		<img src="./enter.png" width="50px" height="50px"></img>
 
+		<nux>
 <p><a href="https://hirofumi090.chobi.net/java/index.html">・Java言語</a></p>
 
 <p><a href="https://hirofumi090.chobi.net/android/index.html">Android 開発</a></p>
@@ -25,10 +26,11 @@
 <p><a href="https://hirofumi090.chobi.net/ruby/index.html">ruby言語</a></p>
 <p><a href="https://hirofumi090.chobi.net/clang/index.html">C言語解説</a></p>
 <p><a href="https://hirofumi090.chobi.net/puppy-linux-S15/index.html">puppy-linux-S15</a></p>
-<p><a href="https://hirofumi090.chobi.net/Francis/index.html">フランス語</a></p>
+<p><a href="https://hirofumi090.chobi.net/Francies/index.html">フランス語</a></p>
 <p><a href="https://hirofumi090.chobi.net/blog/index.html">hirofumi090のブログ</a></p>
 <p><a href="https://hirofumi090.chobi.net/linux/index.html">linuxの技術メモ</a></p>
-	</nav_enter>
+		</nux>
+	</nav>
 
 
 
@@ -45,7 +47,7 @@
 <p><a href="https://hirofumi090.chobi.net/ruby/index.html">ruby言語</a></p>
 <p><a href="https://hirofumi090.chobi.net/clang/index.html">C言語解説</a></p>
 <p><a href="https://hirofumi090.chobi.net/puppy-linux-S15/index.html">puppy-linux-S15</a></p>
-<p><a href="https://hirofumi090.chobi.net/Francis/index.html">フランス語</a></p>
+<p><a href="https://hirofumi090.chobi.net/Francies/index.html">フランス語</a></p>
 <p><a href="https://hirofumi090.chobi.net/blog/index.html">hirofumi090のブログ</a></p>
 <p><a href="https://hirofumi090.chobi.net/linux/index.html">linuxの技術メモ</a></p>
 
@@ -55,17 +57,7 @@
 <script>
 	$(function(){
 
-		var c = 0;
-
-		$("nav_enter").click(function(){
-				$("nav_exit").show();
-				$("nav_enter").hide();
-				});
-		$("nav_exit").click(function(){
-
-				$("nav_exit").hide();
-				$("nav_enter").show();
-	
+		$("nav").click(function(){
 		});
 	});
 </script>

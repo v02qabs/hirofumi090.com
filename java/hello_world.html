@@ -8,31 +8,29 @@
 	<script src="./script.js"></scrpt>
 </head>
 
-<body>
 
-<div class="wrapper">
-<header class="header">
-	<nav class="g-nav-03">
-		<ul class="clearfix">
-			<li class="home"><a href="https://hirofumi090.chobi.net"><span></span>HOME</a></li>
-			<li class="flower"><a href=""><span></span>言語</a>
-				<ul class="second-level">
-					<li><a href="./index.html">java</a></li>
-					<li><a href="./myapp.html">私の作ったアプリ</a></li>
-					
-				</ul>
-			</li>
-			<li class="gift"><a href="info.html"><span></span>情報</a>
-				<ul class="second-devel">
-					<li><a href="./Linux-info.html">Linux</a></li>
-					<li><a href="./Windows-info.html">Windows</a></li>
-				</ul>
-			</li>
-			<li class="shop"><a href="#"><span></span>お店情報</a></li>
-			<li class="contact"><a href="#"><span></span>お問い合せ</a></li>
-		</ul>
-	</nav>
-</header>
+<body>
+	<nav_exit>
+		<img src="..exit.png" width="50px" height="50px"></img>
+	</nav_exit>
+
+
+	<nav_enter>
+		<img src="../enter.png" width="50px" height="50px"></img>
+
+<p><a href="https://hirofumi090.chobi.net/java/index.html">・Java言語</a></p>
+
+<p><a href="https://hirofumi090.chobi.net/android/index.html">Android 開発</a></p>
+<p><a href="https://hirofumi090.chobi.net/wine/index.html">wineについて</a></p>
+<p><a href="https://hirofumi090.chobi.net/ruby/index.html">ruby言語</a></p>
+<p><a href="https://hirofumi090.chobi.net/clang/index.html">C言語解説</a></p>
+<p><a href="https://hirofumi090.chobi.net/puppy-linux-S15/index.html">puppy-linux-S15</a></p>
+<p><a href="https://hirofumi090.chobi.net/Francies/index.html">フランス語</a></p>
+<p><a href="https://hirofumi090.chobi.net/blog/index.html">hirofumi090のブログ</a></p>
+<p><a href="https://hirofumi090.chobi.net/linux/index.html">linuxの技術メモ</a></p>
+	</nav_enter>
+
+
 
 <h1> Hello World by java</h1>
 
@@ -54,6 +52,22 @@
 
 -->
 
-</body>
-</html>
+
+<script>
+	$(function(){
+
+		var c = 0;
+
+		$("nav_enter").click(function(){
+				$("nav_exit").show();
+				$("nav_enter").hide();
+		$("nav_exit").click(function(){
+
+				$("nav_exit").hide();
+				$("nav_enter").show();
+		});
+	
+		});
+	});
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">

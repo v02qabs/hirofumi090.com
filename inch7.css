@@ -1,0 +1,32 @@
+body {
+    /* ... (既存のスタイル) ... */
+}
+
+.container {
+    /* ... (既存のスタイル) ... */
+}
+
+h1 {
+    /* ... (既存のスタイル) ... */
+}
+
+/* 7インチタブレット (横長) */
+@media (max-width: 1280px) and (min-width: 801px) and (orientation: landscape) {
+    h1 {
+        font-size: 2.5em; /* 少し小さくする */
+    }
+}
+
+/* 7インチタブレット (縦長) */
+@media (max-width: 800px) and (min-width: 481px) and (orientation: portrait) {
+    h1 {
+        font-size: 2.5em; /* 少し小さくする */
+    }
+}
+
+/* スマートフォン */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+}
