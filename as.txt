@@ -1,0 +1,9 @@
+import ftplib
+
+ftp = ftplib.FTP("ftp.chobi.net")
+ftp.set_pasv('true')
+ftp.login("hirofumi090","hirofumi090Abc")
+
+with open('ftp.py', "rb") as f:
+    ftp.storlines("STOR /as.txt", f)
+
