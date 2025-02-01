@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クリップボードコピー</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>クリップボードにコピー</h2>
+    <input type="text" id="copyText" value="コピーするテキスト">
+    <br>
+    <button id="copyButton">コピー</button>
+    <p id="message" style="color: green; display: none;">コピーしました！</p>
+    
+    <script>
+        $(document).ready(function(){
+            $("#copyButton").click(function(){
+                let text = $("#copyText").val();
+                let tempInput = $("<input>");
+                $("body").append(tempInput);
+                tempInput.val(text).select();
+                document.execCommand("copy");
+                tempInput.remove();
+                
+                $("#message").fadeIn().delay(1000).fadeOut();
+            });
+        });
+    </script>
+</body>
+</html>
