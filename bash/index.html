@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<script src="jquery.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<title>PC技術・ドキュメント</title>
+	<link rel="stylesheet" href="slide.css" type="text/css">
+</head>
+
+<body>
+	<nav_exit>
+		<img src="./exit.png" width="50px" height="50px"></img>
+	</nav_exit>
+
+
+	<nav_enter>
+		<img src="./enter.png" width="50px" height="50px"></img>
+
+<p><a href="https://hirofumi090.chobi.net/java/index.html">・Java言語</a></p>
+
+<p><a href="https://hirofumi090.chobi.net/android/index.html">Android 開発</a></p>
+<p><a href="https://hirofumi090.chobi.net/wine/index.html">wineについて</a></p>
+<p><a href="https://hirofumi090.chobi.net/ruby/index.html">ruby言語</a></p>
+<p><a href="https://hirofumi090.chobi.net/clang/index.html">C言語解説</a></p>
+<p><a href="https://hirofumi090.chobi.net/puppy-linux-S15/index.html">puppy-linux-S15</a></p>
+<p><a href="https://hirofumi090.chobi.net/Francis/index.html">フランス語</a></p>
+<p><a href="https://hirofumi090.chobi.net/blog/index.html">hirofumi090のブログ</a></p>
+<p><a href="https://hirofumi090.chobi.net/linux/index.html">linuxの技術メモ</a></p>
+<p><a href="https://hirofumi090.chobi.net/bash/index.html">bash shell script</a></p>
+	</nav_enter>
+
+
+
+<h1>PCスキル大辞典</h1>
+
+ようこそ。
+ここでは、github.com と連携しながら、
+bashの解説をしていくサイトを作ってます。
+
+
+<li><a href="https://hirofumi090.chobi.net/bash/echo.html">echoコマンド</a></li>
+
+
+
+
+
+
+<script>
+	$(function(){
+
+		var c = 0;
+
+		$("nav_enter").click(function(){
+				$("nav_exit").show();
+				$("nav_enter").hide();
+				});
+		$("nav_exit").click(function(){
+
+				$("nav_exit").hide();
+				$("nav_enter").show();
+	
+		});
+	});
+</script>
+
