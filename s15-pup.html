@@ -10,15 +10,14 @@
 </head>
 
 <body>
-	<nux>
+	<nav_exit>
 		<img src="./exit.png" width="50px" height="50px"></img>
-	</nux>
+	</nav_exit>
 
 
-	<nav>
+	<nav_enter>
 		<img src="./enter.png" width="50px" height="50px"></img>
 
-		<nux>
 <p><a href="https://hirofumi090.chobi.net/java/index.html">・Java言語</a></p>
 
 <p><a href="https://hirofumi090.chobi.net/android/index.html">Android 開発</a></p>
@@ -26,38 +25,39 @@
 <p><a href="https://hirofumi090.chobi.net/ruby/index.html">ruby言語</a></p>
 <p><a href="https://hirofumi090.chobi.net/clang/index.html">C言語解説</a></p>
 <p><a href="https://hirofumi090.chobi.net/puppy-linux-S15/index.html">puppy-linux-S15</a></p>
-<p><a href="https://hirofumi090.chobi.net/Francies/index.html">フランス語</a></p>
+<p><a href="https://hirofumi090.chobi.net/Francis/index.html">フランス語</a></p>
 <p><a href="https://hirofumi090.chobi.net/blog/index.html">hirofumi090のブログ</a></p>
 <p><a href="https://hirofumi090.chobi.net/linux/index.html">linuxの技術メモ</a></p>
-		</nux>
-	</nav>
+	</nav_enter>
 
 
 
 <h1>PCスキル大辞典</h1>
 
-ようこそ。
-ここでは、github.com と連携しながら、
-プログラムの解説をしていくサイトを作ってます。
+<p>S15 puppy linux 2025-02-28 金曜日、pm 8:22 現在</p>
+<p>
+64bit 版の　s15 puppy linux では、wine コマンドの動作がしない
+事を確認済です。
+<br/>
 
-<p><a href="https://hirofumi090.chobi.net/java/index.html">・Java言語</a></p>
-
-<p><a href="https://hirofumi090.chobi.net/android/index.html">Android 開発</a></p>
-<p><a href="https://hirofumi090.chobi.net/wine/index.html">wineについて</a></p>
-<p><a href="https://hirofumi090.chobi.net/ruby/index.html">ruby言語</a></p>
-<p><a href="https://hirofumi090.chobi.net/clang/index.html">C言語解説</a></p>
-<p><a href="https://hirofumi090.chobi.net/puppy-linux-S15/index.html">puppy-linux-S15</a></p>
-<p><a href="https://hirofumi090.chobi.net/Francies/index.html">フランス語</a></p>
-<p><a href="https://hirofumi090.chobi.net/blog/index.html">hirofumi090のブログ</a></p>
-<p><a href="https://hirofumi090.chobi.net/linux/index.html">linuxの技術メモ</a></p>
-
+</p>
 
 
 
 <script>
 	$(function(){
 
-		$("nav").click(function(){
+		var c = 0;
+
+		$("nav_enter").click(function(){
+				$("nav_exit").show();
+				$("nav_enter").hide();
+				});
+		$("nav_exit").click(function(){
+
+				$("nav_exit").hide();
+				$("nav_enter").show();
+	
 		});
 	});
 </script>
