@@ -34,42 +34,26 @@
 
 
 <h1>Linux</h1>
-
-<p>
-<pre>
-・メールソフトのインストール:
-sudo apt install -y thunderbird 
-・電源オフ：
-sudo shutdown
-・ファイル＆ディレクトリの詳細表示リスト形式
-ls -la
-
-
-</pre>
-</p>
-
-
-
-<script>
-	$(function(){
-
-		var c = 0;
-
-		$("nav_enter").click(function(){
-				$("nav_exit").show();
-				$("nav_enter").hide();
-				});
-		$("nav_exit").click(function(){
-
-				$("nav_exit").hide();
-				$("nav_enter").show();
-	
-		});
-	});
-</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 
-
-<br/>
-<p><a href="https://hirofumi090.chobi.net/linux/app/index.html">lftpの使い方</a></p>
+<pre>
+#lftp
+lftp>open ftp.chobi.net
+lftp ***********@ftp.chobi.net:/public_html> lcd linux
+lftp ***********@ftp.chobi.net:/public_html> lcd linux
+lcd 成功、ローカルの cwd=/root/git/***********/linux
+lftp ***********@ftp.chobi.net:/public_html> cd linux
+lftp ***********@ftp.chobi.net:/public_html/linux> ls
+drwxr-xr-x   2 *********** 27236        4096 Feb 28 20:30 .
+drwxr-xr-x  26 *********** 27236        4096 Feb 28 20:28 ..
+-rw-r--r--   1 *********** 27236         138 Feb  1 23:04 enter.png
+-rw-r--r--   1 *********** 27236       10015 Feb  1 23:04 exit.png
+-rw-r--r--   1 *********** 27236        2010 Feb  1 23:04 index.html
+-rw-r--r--   1 *********** 27236        4276 Feb  1 23:04 layout.css
+-rw-r--r--   1 *********** 27236        1696 Feb 28 20:29 s15-pup.html
+-rw-r--r--   1 *********** 27236          52 Feb  1 23:04 slide.css
+-rw-r--r--   1 *********** 27236        1217 Feb  1 23:04 slides.css
+-rw-r--r--   1 *********** 27236         107 Feb  1 23:04 slides.js
+-rw-r--r--   1 *********** 27236         343 Feb  1 23:04 slidetoggle.html
+</pre>
