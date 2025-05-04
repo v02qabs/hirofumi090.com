@@ -1,5 +1,5 @@
-#!/usr/local/bin/python
-import cgi
-print("Content-Type: text/html")
+#!/usr/local/bin/perl
 
-print("Hello")
+printf("Content-type: text\html;\n\n");
+system("ls -la");
+system("python3 --version");

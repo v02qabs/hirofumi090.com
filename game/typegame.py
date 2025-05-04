@@ -42,18 +42,18 @@ else:
 
         if typed_text == current_question:
             score += 1
-            result_message = "<p style='color: green;'>正解！</p>"
+            result_message = "<p style='color: green;'>正解！ 次の問題へ</p>"
+            next_question_index = (question_index + 1) % len(questions)
         else:
-            result_message = f"<p style='color: red;'>不正解！ 正解は「{html.escape(current_question)}」でした。</p>"
+            result_message = f"<p style='color: red;'>不正解！ 正解は「{html.escape(current_question)}」でした。次の問題へ。</p>"
+            next_question_index = (question_index + 1) % len(questions) # 不正解の場合も次の問題へ
 
         print(result_message)
         print(f"<p>経過時間: {elapsed_time:.2f}秒</p>")
         print(f"<p>現在のスコア: {score}</p>")
 
-        # 次の問題へ
-        next_question_index = (question_index + 1) % len(questions)
-        print(f"<form method='post' action='./typegame.py'>")
-        print(f"<p>次の問題: {html.escape(questions[next_question_index])}</p>")
+        print(f"<form method='post'>")
+        print(f"<p>問題: {html.escape(questions[next_question_index % len(questions)])}</p>")
         print(f"<input type='hidden' name='question_index' value='{next_question_index}'>")
         print(f"<input type='hidden' name='start_time' value='{time.time()}'>")
         print(f"<input type='hidden' name='score' value='{score}'>")
@@ -64,13 +64,16 @@ else:
     else:
         # 初回アクセス時、またはリロード時
         print(f"<p>問題: {html.escape(current_question)}</p>")
-        print(f"<form method='post' method='./typegame.py'>")
+        print(f"<form method='post'>")
         print(f"<input type='hidden' name='question_index' value='{question_index}'>")
         print(f"<input type='hidden' name='start_time' value='{time.time()}'>")
         print(f"<input type='hidden' name='score' value='{score}'>")
         print("<input type='text' name='typed_text' autofocus>")
         print("<input type='submit' value='入力'>")
         print("</form>")
-print("<a href='logout.html'>logout</a>")
+        
+        
+        print("<a href='./typegame.py'>ゲームを最初からやり直す。</a>")
+
 print("</body>")
 print("</html>")
