@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ストップウォッチ</title>
+    <script>
+        let startTime;
+        let intervalId;
+        let elapsedTime = 0;
+
+        function start() {
+            startTime = Date.now() - elapsedTime;
+            intervalId = setInterval(updateTime, 10);
+            document.getElementById("startButton").disabled = true;
+            document.getElementById("stopButton").disabled = false;
+            document.getElementById("resetButton").disabled = true;
+        }
+
+        function stop() {
+            clearInterval(intervalId);
+            elapsedTime = Date.now() - startTime;
+            document.getElementById("startButton").disabled = false;
+            document.getElementById("stopButton").disabled = true;
+            document.getElementById("resetButton").disabled = false;
+
+            // CGIに経過時間を送信
+            fetch("./stopTime.py", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `elapsedTime=${elapsedTime}`
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("result").innerHTML = data;
+            });
+        }
+
+        function reset() {
+            clearInterval(intervalId);
+            elapsedTime = 0;
+            document.getElementById("display").innerText = formatTime(elapsedTime);
+            document.getElementById("startButton").disabled = false;
+            document.getElementById("stopButton").disabled = true;
+            document.getElementById("resetButton").disabled = true;
+            document.getElementById("result").innerHTML = "";
+        }
+
+        function updateTime() {
+            const currentTime = Date.now();
+            elapsedTime = currentTime - startTime;
+            document.getElementById("display").innerText = formatTime(elapsedTime);
+        }
+
+        function formatTime(ms) {
+            const date = new Date(ms);
+            const minutes = date.getUTCMinutes().toString().padStart(2, '0');
+            const seconds = date.getUTCSeconds().toString().padStart(2, '0');
+            const milliseconds = Math.floor(date.getUTCMilliseconds() / 10).toString().padStart(2, '0');
+            return `${minutes}:${seconds}.${milliseconds}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>ストップウォッチ</h1>
+    <div id="display">00:00.00</div>
+    <button id="startButton" onclick="start()">開始</button>
+    <button id="stopButton" onclick="stop()" disabled>停止</button>
+    <button id="resetButton" onclick="reset()" disabled>リセット</button>
+    <div id="result"></div>
+</body>
+</html>
